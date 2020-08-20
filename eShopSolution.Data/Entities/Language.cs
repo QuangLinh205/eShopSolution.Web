@@ -4,7 +4,7 @@ using System.Text;
 
 namespace eShopSolution.Data.Entities
 {
-    class Language
+    public class Language
     {
         public string Id { get; set; }
 

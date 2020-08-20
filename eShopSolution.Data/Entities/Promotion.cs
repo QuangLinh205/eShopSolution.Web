@@ -5,7 +5,7 @@ using System.Text;
 
 namespace eShopSolution.Data.Entities
 {
-    class Promotion
+    public class Promotion
     {
         public int Id { set; get; }
         public DateTime FromDate { set; get; }
