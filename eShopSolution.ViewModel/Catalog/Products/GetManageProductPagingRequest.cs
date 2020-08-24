@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModel.Catalog.Products.Manager
+namespace eShopSolution.ViewModel.Catalog.Products
 {
-    public class GetProductPagingRequest : PagingRequestBase // kế thừa pagingRequestBase có 2 trường PageIndex và PageSize
+    public class GetManageProductPagingRequest : PagingRequestBase // kế thừa pagingRequestBase có 2 trường PageIndex và PageSize
     {
         public string Keyword { get; set; }
         public List<int> CategoryIds { get; set; }
