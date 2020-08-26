@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModel.Catalog.Products
+namespace eShopSolution.ViewModel.Catalog.ProductImages
 {
     public class GetManageProductPagingRequest : PagingRequestBase // kế thừa pagingRequestBase có 2 trường PageIndex và PageSize
     {

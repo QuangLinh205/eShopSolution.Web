@@ -1,4 +1,4 @@
-﻿using eShopSolution.ViewModel.Catalog.Products;
+﻿using eShopSolution.ViewModel.Catalog.ProductImages;
 using eShopSolution.ViewModel.Common;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -13,21 +13,29 @@ namespace eShopSolution.Application.Catalogs.Products
         Task<int> Create(ProductCreateRequest request); // phương thức create trả về kiểu int
 
         Task<int> Update(ProductUpdateRequest request);
+
         Task<bool> UpdatePrice(int ProductId, decimal newPrice);
+
         Task<bool> UpdateStoke(int ProductId, int addedQuantity);
+
         Task AddViewCount(int ProductId);
 
         Task<int> Delete(int productID);
+
         Task<PageResult<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
-        Task<int> AddImages(int ProductId, List<IFormFile> files); // thêm ảnh vào sản phẩm nào, thêm vào 1 danh sách file
-        Task<int> RemoveImages(int ImageId);
-        Task<int> UpdateImages(int ImageId, string Caption, string isDefault);
+
         Task<List<ProductViewModel>> Getvalue();
-        Task<string> SaveFile(IFormFile file);
 
+        Task<ProductViewModel> GetById(int ProductId, string LanguageId);
 
+        Task<int> AddImage(int ProductId, ProductImageCreateRequest productImage);
 
+        Task<int> RemoveImage(int imageId);
 
+        Task<int> UpdateImage(int imageId, ProductImageUpdateRequest productImage);
 
+        Task<List<ProductImageViewModel>> GetListImages(int productId);
+
+        Task<ProductImageViewModel> GetImageById(int imageId);
     }
 }
